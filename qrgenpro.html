@@ -45,17 +45,55 @@
             padding: 0 20px;
         }
 
-        /* Header Ad Space */
-        .header-ad {
-            background-color: #f0f0f0;
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
+        /* Ad Space Styling */
+        .ad-space {
+            background-color: #fff8e1;
+            border: 2px dashed #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            position: relative;
         }
-
-        .header-ad p {
-            color: #666;
+        .ad-space::before {
+            content: <script type="text/javascript">
+	atOptions = {
+		'key' : '320f56a3237c4712c5614b237fda24ab',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//margaretnerves.com/320f56a3237c4712c5614b237fda24ab/invoke.js"></script>
+            display: block;
+            color: #ff6f00;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
             font-size: 14px;
+        }
+        .ad-label {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #ffc107;
+            color: #000;
+            padding: 2px 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .ad-container {
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff3e0;
+            width: 100%;
+        }
+        .ad-container.large {
+            min-height: 250px;
+        }
+        .ad-container.sidebar {
+            min-height: 600px;
         }
 
         header {
@@ -77,22 +115,6 @@
             opacity: 0.9;
         }
 
-        /* Top Ad Banner */
-        .top-banner-ad {
-            background-color: #f8f9fa;
-            padding: 15px;
-            text-align: center;
-            margin: 0 auto 2rem;
-            border-radius: 5px;
-            border: 1px dashed #ccc;
-            max-width: 1200px;
-        }
-
-        .top-banner-ad p {
-            color: #666;
-            font-size: 14px;
-        }
-
         .generator-section {
             display: flex;
             flex-wrap: wrap;
@@ -102,21 +124,6 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: var(--shadow);
-        }
-
-        /* Sidebar Ad Space */
-        .sidebar-ad {
-            background-color: #f8f9fa;
-            padding: 15px;
-            margin-bottom: 2rem;
-            border-radius: 5px;
-            border: 1px dashed #ccc;
-            text-align: center;
-        }
-
-        .sidebar-ad p {
-            color: #666;
-            font-size: 14px;
         }
 
         .input-section, .output-section {
@@ -311,22 +318,6 @@
             justify-content: center;
         }
 
-        /* Mid-content Ad Banner */
-        .mid-banner-ad {
-            background-color: #f8f9fa;
-            padding: 15px;
-            text-align: center;
-            margin: 2rem auto;
-            border-radius: 5px;
-            border: 1px dashed #ccc;
-            max-width: 1200px;
-        }
-
-        .mid-banner-ad p {
-            color: #666;
-            font-size: 14px;
-        }
-
         .features-section {
             margin-bottom: 3rem;
             text-align: center;
@@ -396,22 +387,6 @@
 
         .steps li {
             margin-bottom: 1rem;
-        }
-
-        /* Bottom Ad Banner */
-        .bottom-banner-ad {
-            background-color: #f8f9fa;
-            padding: 15px;
-            text-align: center;
-            margin: 2rem auto;
-            border-radius: 5px;
-            border: 1px dashed #ccc;
-            max-width: 1200px;
-        }
-
-        .bottom-banner-ad p {
-            color: #666;
-            font-size: 14px;
         }
 
         footer {
@@ -496,19 +471,28 @@
                 font-size: 0.9rem;
             }
 
-            .sidebar-ad {
+            .sidebar-ad-container {
                 display: none;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header Ad Space -->
-    <div class="header-ad">
-        <p>Advertisement</p>
-        <!-- Ad code would go here -->
-        <div style="min-height: 90px; background: #eee; display: flex; align-items: center; justify-content: center;">
-            <p>Header Ad Space (728x90)</p>
+    <!-- ==================== HEADER AD SPACE ==================== -->
+    <div class="ad-space">
+        <span class="ad-label">HEADER (728x90)</span>
+        <script type="text/javascript">
+	atOptions = {
+		'key' : '320f56a3237c4712c5614b237fda24ab',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//margaretnerves.com/320f56a3237c4712c5614b237fda24ab/invoke.js"></script>
+        <div class="ad-container">
+            Header Ad Space
         </div>
     </div>
 
@@ -519,22 +503,13 @@
         </div>
     </header>
 
-    <!-- Top Banner Ad -->
+    <!-- ==================== TOP BANNER AD SPACE ==================== -->
     <div class="container">
-        <div class="top-banner-ad">
-            <p>Advertisement</p>
-            <script type="text/javascript">
-	atOptions = {
-		'key' : 'ffcf9e7ab84612b437dd244dcb463a47',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//margaretnerves.com/ffcf9e7ab84612b437dd244dcb463a47/invoke.js"></script>
-            <div style="min-height: 250px; background: #eee; display: flex; align-items: center; justify-content: center;">
-                <p>Top Banner Ad (970x250 or Responsive)</p>
+        <div class="ad-space">
+            <span class="ad-label">TOP BANNER (970x250)</span>
+            <!-- REPLACE THIS DIV WITH YOUR AD CODE -->
+            <div class="ad-container large">
+                Top Banner Ad Space
             </div>
         </div>
     </div>
@@ -648,21 +623,21 @@
                     </div>
                 </section>
 
-                <!-- Mid-content Ad Banner -->
-                <div class="mid-banner-ad">
-                    <p>Advertisement</p>
-                    <script type="text/javascript">
+                <!-- ==================== MID-CONTENT AD SPACE ==================== -->
+                <div class="ad-space">
+                    <span class="ad-label">MID-CONTENT (728x90)</span>
+                   <script type="text/javascript">
 	atOptions = {
-		'key' : 'ffcf9e7ab84612b437dd244dcb463a47',
+		'key' : '320f56a3237c4712c5614b237fda24ab',
 		'format' : 'iframe',
 		'height' : 90,
 		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//margaretnerves.com/ffcf9e7ab84612b437dd244dcb463a47/invoke.js"></script>
-                    <div style="min-height: 90px; background: #eee; display: flex; align-items: center; justify-content: center;">
-                        <p>Mid-content Ad (728x90)</p>
+<script type="text/javascript" src="//margaretnerves.com/320f56a3237c4712c5614b237fda24ab/invoke.js"></script>
+                    <div class="ad-container">
+                        Mid-content Ad Space
                     </div>
                 </div>
 
@@ -700,21 +675,21 @@
                     </div>
                 </section>
 
-                <!-- Bottom Ad Banner -->
-                <div class="bottom-banner-ad">
-                    <p>Advertisement</p>
+                <!-- ==================== BOTTOM BANNER AD SPACE ==================== -->
+                <div class="ad-space">
+                    <span class="ad-label">BOTTOM BANNER (970x250)</span>
                     <script type="text/javascript">
 	atOptions = {
-		'key' : 'ffcf9e7ab84612b437dd244dcb463a47',
+		'key' : 'f5886eb990bdd018205d24ac8905345e',
 		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
+		'height' : 250,
+		'width' : 970,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//margaretnerves.com/ffcf9e7ab84612b437dd244dcb463a47/invoke.js"></script>
-                    <div style="min-height: 250px; background: #eee; display: flex; align-items: center; justify-content: center;">
-                        <p>Bottom Banner Ad (970x250 or Responsive)</p>
+<script type="text/javascript" src="//margaretnerves.com/f5886eb990bdd018205d24ac8905345e/invoke.js"></script>
+                    <div class="ad-container large">
+                        Bottom Banner Ad Space
                     </div>
                 </div>
 
@@ -730,22 +705,22 @@
                 </section>
             </div>
 
-            <!-- Sidebar Ad Space -->
+            <!-- ==================== SIDEBAR AD SPACE ==================== -->
             <div style="flex: 1; min-width: 300px;">
-                <div class="sidebar-ad">
-                    <p>Advertisement</p>
-                    <script type="text/javascript">
+                <div class="ad-space" style="position: sticky; top: 20px;">
+                    <span class="ad-label">SIDEBAR (300x600)</span>
+                   <script type="text/javascript">
 	atOptions = {
-		'key' : '6b8e8d2a011ad9a3510486036fc7201e',
+		'key' : '320f56a3237c4712c5614b237fda24ab',
 		'format' : 'iframe',
-		'height' : 250,
+		'height' : 600,
 		'width' : 300,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//margaretnerves.com/6b8e8d2a011ad9a3510486036fc7201e/invoke.js"></script>
-                    <div style="min-height: 600px; background: #eee; display: flex; align-items: center; justify-content: center;">
-                        <p>Sidebar Ad (300x600)</p>
+<script type="text/javascript" src="//margaretnerves.com/320f56a3237c4712c5614b237fda24ab/invoke.js"></script>
+                    <div class="ad-container sidebar">
+                        Sidebar Ad Space
                     </div>
                 </div>
             </div>
