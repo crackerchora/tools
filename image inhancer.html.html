@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="100% Free AI Photo Enhancer - Improve image quality, increase resolution, fix blurry photos instantly with no watermarks. No signup required.">
+    <meta name="keywords" content="free photo enhancer, AI image quality improvement, online photo editor, fix blurry pictures, enhance photo resolution, no watermark">
+    <meta name="author" content="PhotoEnhancer Pro">
+    <meta property="og:title" content="Free AI Photo Enhancer - Improve Image Quality Instantly">
+    <meta property="og:description" content="Enhance your photos for free with our AI-powered tool. Increase resolution, fix blur, and improve quality with one click.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://photoenhancerpro.com">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://photoenhancerpro.com">
+    <title>Free AI Photo Enhancer | Improve Image Quality Instantly - PhotoEnhancer Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --gray-color: #6c757d;
+            --success-color: #4bb543;
+            --font-primary: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--dark-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn.primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn.primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn.secondary {
+            background-color: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn.secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .section-subtitle {
+            color: var(--gray-color);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--gray-color);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .image-comparison {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .before, .after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .before {
+            width: 50%;
+            overflow: hidden;
+        }
+
+        .before img, .after img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .before span, .after span {
+            position: absolute;
+            bottom: 10px;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .before span {
+            left: 10px;
+        }
+
+        .after span {
+            right: 10px;
+        }
+
+        /* Upload Section */
+        .upload-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .upload-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .upload-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .upload-box {
+            flex: 2;
+            min-width: 300px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            border: 2px dashed #dee2e6;
+            transition: all 0.3s ease;
+        }
+
+        .upload-box:hover {
+            border-color: var(--primary-color);
+        }
+
+        .upload-box i {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .upload-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .upload-box p {
+            color: var(--gray-color);
+            margin-bottom: 20px;
+        }
+
+        .options-box {
+            flex: 1;
+            min-width: 250px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .options-box h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .option {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #f8f9fa;
+        }
+
+        .option label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .option input {
+            margin-right: 10px;
+        }
+
+        #enhanceBtn {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .preview-container {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .preview-container img {
+            max-height: 200px;
+            border-radius: 5px;
+            max-width: 100%;
+        }
+
+        /* Processing Animation */
+        .processing-animation {
+            display: none;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 10px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Enhanced Result */
+        .enhanced-result {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .result-comparison {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .result-image {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .result-image img {
+            max-height: 250px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-label {
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .features-section h2, .features-section .section-subtitle {
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(67, 97, 238, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .feature-icon i {
+            font-size: 30px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .how-it-works h2, .how-it-works .section-subtitle {
+            text-align: center;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .testimonials-section h2, .testimonials-section .section-subtitle {
+            text-align: center;
+        }
+
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .rating {
+            color: var(--warning-color);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-card p:before, .testimonial-card p:after {
+            content: '"';
+            font-size: 24px;
+            color: var(--primary-color);
+            opacity: 0.3;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+        }
+
+        .user img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        .user-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .user-info span {
+            font-size: 14px;
+            color: var(--gray-color);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .contact-section .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .contact-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-methods {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-method {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-method i {
+            font-size: 30px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .contact-method h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--font-primary);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        /* Free Banner */
+        .free-banner {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: 500;
+            margin-bottom: -20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .footer-about .logo a {
+            color: white;
+        }
+
+        .footer-about p {
+            margin: 20px 0;
+            color: #adb5bd;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+        }
+
+        .footer-links {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .footer-links h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #adb5bd;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-newsletter {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .footer-newsletter p {
+            color: #adb5bd;
+            margin-bottom: 20px;
+        }
+
+        .footer-newsletter input {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 50px;
+            margin-bottom: 10px;
+            font-family: var(--font-primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 14px;
+        }
+
+        /* Drop Area Styles */
+        #drop-area.highlight {
+            border-color: var(--primary-color);
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            
+            .hero-content, .hero-image {
+                flex: 100%;
+            }
+            
+            .upload-box, .options-box {
+                flex: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+            
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            
+            .steps {
+                flex-direction: column;
+            }
+            
+            .testimonial-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Photo<span>Enhancer</span>Pro</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="free-banner">
+            <i class="fas fa-gift"></i> 100% FREE - No Watermarks - No Signup Required
+        </div>
+
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Transform Your Photos with AI Magic - Completely Free</h1>
+                    <p>Enhance resolution, improve colors, and restore old photos instantly with our advanced AI technology. No hidden fees, no watermarks.</p>
+                    <div class="cta-buttons">
+                        <a href="#upload" class="btn primary">Enhance Your Photo Now</a>
+                        <a href="#how-it-works" class="btn secondary">See How It Works</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-comparison">
+                        <div class="before">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Original blurry landscape photo before enhancement">
+                            <span>Before</span>
+                        </div>
+                        <div class="after">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80" alt="Enhanced sharp landscape photo after processing">
+                            <span>After</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="upload" class="upload-section">
+            <div class="container">
+                <h2>Enhance Your Photos in 3 Easy Steps</h2>
+                <p class="section-subtitle">No signup required - completely free forever</p>
+                <div class="upload-container">
+                    <div class="upload-box" id="drop-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Upload Your Photo</h3>
+                        <p>Drag & drop your image here or click to browse</p>
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                        <button class="btn primary" id="browseBtn">Select Image</button>
+                        <div class="preview-container" id="previewContainer"></div>
+                        <div class="processing-animation" id="processingAnimation">
+                            <div class="spinner"></div>
+                            <p>Enhancing your photo...</p>
+                        </div>
+                        <div class="enhanced-result" id="enhancedResult">
+                            <div class="result-comparison">
+                                <div class="result-image">
+                                    <img id="originalImage" src="" alt="Original image">
+                                    <div class="result-label">Original</div>
+                                </div>
+                                <div class="result-image">
+                                    <img id="enhancedImage" src="" alt="Enhanced image">
+                                    <div class="result-label">Enhanced</div>
+                                </div>
+                            </div>
+                            <button class="btn primary" id="downloadBtn">Download Enhanced Photo</button>
+                        </div>
+                    </div>
+                    <div class="options-box">
+                        <h3>Enhancement Options</h3>
+                        <div class="option">
+                            <label>
+                                <input type="checkbox" id="resolutionCheckbox" checked>
+                                Improve Resolution (2x-8x)
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input type="checkbox" id="colorCheckbox" checked>
+                                Color Correction
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input type="checkbox" id="noiseCheckbox">
+                                Remove Noise
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input type="checkbox" id="faceCheckbox">
+                                Face Enhancement
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input type="checkbox" id="backgroundCheckbox">
+                                Background Sharpening
+                            </label>
+                        </div>
+                        <button class="btn primary" id="enhanceBtn" disabled>Enhance Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>Powerful Features - All Free</h2>
+                <p class="section-subtitle">Our AI-powered technology brings your photos to life at no cost</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h3>Super Resolution</h3>
+                        <p>Increase your image resolution up to 8x without losing quality - completely free.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Color Enhancement</h3>
+                        <p>Automatically correct and enhance colors for vibrant, natural-looking photos.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>Noise Reduction</h3>
+                        <p>Remove grain and noise from low-light or high-ISO images with one click.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-portrait"></i>
+                        </div>
+                        <h3>Face Refinement</h3>
+                        <p>Enhance facial features while preserving natural appearance - no watermarks.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>Old Photo Restoration</h3>
+                        <p>Restore and colorize old, damaged, or faded photographs for free.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Instant Processing</h3>
+                        <p>Get results in seconds with our cloud-based AI processing - no waiting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2>How It Works</h2>
+                <p class="section-subtitle">Enhancing your photos has never been easier - and it's completely free</p>
+                
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Upload Your Photo</h3>
+                            <p>Select an image from your device or drag and drop it into our uploader. No account needed.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Choose Enhancements</h3>
+                            <p>Select the improvements you want to apply to your photo - all options are free.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Download Result</h3>
+                            <p>Get your enhanced photo instantly and download it in high quality with no watermarks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2>What Our Users Say</h2>
+                <p class="section-subtitle">Trusted by thousands of users worldwide - all enjoying our free service</p>
+                
+                <div class="testimonials">
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"I restored my grandparents' wedding photo and it looks like it was taken yesterday. The results were incredible - and completely free!"</p>
+                        <div class="user">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                            <div class="user-info">
+                                <h4>Sarah Johnson</h4>
+                                <span>Family Historian</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"As a real estate photographer, this free tool has saved me hours of editing time. The automatic enhancements are spot on."</p>
+                        <div class="user">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Chen">
+                            <div class="user-info">
+                                <h4>Michael Chen</h4>
+                                <span>Professional Photographer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"I use this for my e-commerce store. The product photos look so much better after enhancement, and my conversion rates improved! Best of all - it's free!"</p>
+                        <div class="user">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez">
+                            <div class="user-info">
+                                <h4>Emma Rodriguez</h4>
+                                <span>E-commerce Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Have Questions About Our Free Service?</h2>
+                    <p>We're here to help! Contact our support team or check out our FAQ section.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email Us</h3>
+                            <p>support@photoenhancerpro.com</p>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-comment-alt"></i>
+                            <h3>Live Chat</h3>
+                            <p>Available 24/7</p>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-question-circle"></i>
+                            <h3>FAQ</h3>
+                            <p>Find quick answers</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <a href="index.html">Photo<span>Enhancer</span>Pro</a>
+                    </div>
+                    <p>Powered by advanced AI technology to bring your photos to life with just one click. 100% free forever.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Get Tips & Updates</h3>
+                    <p>Subscribe to learn how to get the most from our free service</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 PhotoEnhancerPro. All rights reserved. 100% Free Forever.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                this.querySelector('i').classList.toggle('fa-times');
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                        
+                        // Calculate position to scroll to
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Image upload functionality
+            const dropArea = document.getElementById('drop-area');
+            const fileInput = document.getElementById('fileInput');
+            const browseBtn = document.getElementById('browseBtn');
+            const previewContainer = document.getElementById('previewContainer');
+            const enhanceBtn = document.getElementById('enhanceBtn');
+            const processingAnimation = document.getElementById('processingAnimation');
+            const enhancedResult = document.getElementById('enhancedResult');
+            const originalImage = document.getElementById('originalImage');
+            const enhancedImage = document.getElementById('enhancedImage');
+            const downloadBtn = document.getElementById('downloadBtn');
+            
+            // Prevent default drag behaviors
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, preventDefaults, false);
+                document.body.addEventListener(eventName, preventDefaults, false);
+            });
+            
+            // Highlight drop area when item is dragged over it
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropArea.addEventListener(eventName, highlight, false);
+            });
+            
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, unhighlight, false);
+            });
+            
+            // Handle dropped files
+            dropArea.addEventListener('drop', handleDrop, false);
+            
+            // Handle file selection via button
+            browseBtn.addEventListener('click', function() {
+                fileInput.click();
+            });
+            
+            fileInput.addEventListener('change', function() {
+                handleFiles(this.files);
+            });
+            
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            
+            function highlight() {
+                dropArea.classList.add('highlight');
+            }
+            
+            function unhighlight() {
+                dropArea.classList.remove('highlight');
+            }
+            
+            function handleDrop(e) {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                handleFiles(files);
+            }
+            
+            function handleFiles(files) {
+                if (files.length) {
+                    const file = files[0];
+                    if (file.type.startsWith('image/')) {
+                        previewFile(file);
+                    } else {
+                        alert('Please select an image file (JPEG, PNG, etc.).');
+                    }
+                }
+            }
+            
+            function previewFile(file) {
+                const reader = new FileReader();
+                
+                reader.readAsDataURL(file);
+                reader.onloadend = function() {
+                    const img = document.createElement('img');
+                    img.src = reader.result;
+                    img.alt = 'Preview of uploaded image';
+                    
+                    previewContainer.innerHTML = '';
+                    previewContainer.appendChild(img);
+                    previewContainer.style.display = 'block';
+                    
+                    // Store the original image for comparison
+                    originalImage.src = reader.result;
+                    
+                    // Enable enhance button
+                    enhanceBtn.disabled = false;
+                    
+                    // Hide any previous results
+                    enhancedResult.style.display = 'none';
+                    processingAnimation.style.display = 'none';
+                    
+                    // Update drop area text
+                    dropArea.querySelector('h3').textContent = 'Photo Ready for Enhancement';
+                    dropArea.querySelector('p').textContent = file.name;
+                };
+            }
+            
+            // Enhance button functionality
+            enhanceBtn.addEventListener('click', function() {
+                if (!previewContainer.querySelector('img')) return;
+                
+                // Show processing animation
+                this.disabled = true;
+                this.textContent = 'Processing...';
+                processingAnimation.style.display = 'block';
+                
+                // Hide the preview during processing
+                previewContainer.style.display = 'none';
+                
+                // Simulate processing delay (2-5 seconds)
+                const processingTime = 2000 + Math.random() * 3000;
+                
+                setTimeout(() => {
+                    // Hide processing animation
+                    processingAnimation.style.display = 'none';
+                    
+                    // Show the enhanced result
+                    simulateEnhancement();
+                    
+                    // Reset enhance button
+                    this.textContent = 'Enhance Again';
+                    this.disabled = false;
+                }, processingTime);
+            });
+            
+            function simulateEnhancement() {
+                // Get the original image
+                const originalSrc = originalImage.src;
+                
+                // Create a canvas to simulate enhancements
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                const img = new Image();
+                
+                img.onload = function() {
+                    // Set canvas dimensions (simulate higher resolution)
+                    const scale = document.getElementById('resolutionCheckbox').checked ? 1.5 : 1;
+                    canvas.width = img.width * scale;
+                    canvas.height = img.height * scale;
+                    
+                    // Draw the original image
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    
+                    // Apply simulated enhancements based on selected options
+                    if (document.getElementById('colorCheckbox').checked) {
+                        // Simulate color enhancement
+                        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                        const data = imageData.data;
+                        
+                        for (let i = 0; i < data.length; i += 4) {
+                            // Increase saturation and contrast slightly
+                            const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+                            data[i] = avg + (data[i] - avg) * 1.2; // Red
+                            data[i + 1] = avg + (data[i + 1] - avg) * 1.2; // Green
+                            data[i + 2] = avg + (data[i + 2] - avg) * 1.2; // Blue
+                        }
+                        
+                        ctx.putImageData(imageData, 0, 0);
+                    }
+                    
+                    if (document.getElementById('noiseCheckbox').checked) {
+                        // Simulate noise reduction (simplified)
+                        ctx.filter = 'blur(0.5px)';
+                        ctx.drawImage(canvas, 0, 0);
+                        ctx.filter = 'none';
+                    }
+                    
+                    // Set the enhanced image source
+                    enhancedImage.src = canvas.toDataURL('image/jpeg', 0.9);
+                    
+                    // Show the result comparison
+                    enhancedResult.style.display = 'block';
+                };
+                
+                img.src = originalSrc;
+            }
+            
+            // Download enhanced image
+            downloadBtn.addEventListener('click', function() {
+                if (!enhancedImage.src) return;
+                
+                // Create a temporary link
+                const link = document.createElement('a');
+                link.href = enhancedImage.src;
+                link.download = 'enhanced-photo.jpg';
+                
+                // Trigger the download
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+            
+            // Contact form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+            
+            // Newsletter form submission
+            document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for subscribing to our newsletter!');
+                this.reset();
+            });
+            
+            // Animate elements when they come into view
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.feature-card, .step, .testimonial-card');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial state for animation
+            document.querySelectorAll('.feature-card, .step, .testimonial-card').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // Run once on load
+            animateOnScroll();
+            
+            // Run on scroll
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+</html>
